@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // JavaScript to handle the redirection
+        window.onload = function() {
+            // Get the current URL path and query string
+            const currentPath = window.location.pathname;
+            const currentSearch = window.location.search;
+            
+            // Define the target URL
+            const targetDomain = 'https://dashboard.startupkro.com';
+            
+            // Construct the new URL
+            const newUrl = targetDomain + currentPath + currentSearch;
+            
+            // Redirect to the new URL
+            window.location.href = newUrl;
+        };
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, <a id="redirectLink" href="#">click here</a>.</p>
+    <script>
+        // Update the fallback link with the new URL
+        const currentPath = window.location.pathname;
+        const currentSearch = window.location.search;
+        const targetDomain = 'https://dashboard.startupkro.com';
+        const newUrl = targetDomain + currentPath + currentSearch;
+        document.getElementById('redirectLink').href = newUrl;
+    </script>
+</body>
+</html>
